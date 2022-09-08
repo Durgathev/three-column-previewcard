@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*{
+  margin:0;
+  padding: 0;
+  text-decoration: none;
+  font-family:'Big Shoulders Display', 'Lexend Deca';
+}
+:root{
+  --orange:hsl(31, 77%, 52%);
+  --cyan:hsl(184, 100%, 22%);
+  --dark_cyan:hsl(179, 100%, 13%);
+  --white: hsla(0, 0%, 100%, 0.75);
+  --light_grey: hsl(0, 0%, 95%);
+}
+h1{
+  color:var(--white);
+  font-family: 'Big Shoulders Display';
+  font-weight: 700;
+  text-transform: uppercase;
+}
+p{
+  color:var(--white);
+  font-family: 'Lexend Deca';
+  font-size: 15px;
+  font-weight: 400;
+}
+main{
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light_grey);
+}
+.preview-card{
+  width:800px;
+  display: flex;
+}
+.card{
+  padding: 2.5rem;
+  display:flex;
+  flex-direction: column;
+  gap:4rem;
+}
+.card-img{
+  display: flex;
+  flex-direction: column;
+  gap:1.8rem;
+}
+.card-img > img{
+  width:50px;
+}
+button{
+  width:110px;
+  height: 40px;
+  background-color: var(--white);
+  border:none;
+  border-radius: 2rem;
+  text-transform: capitalize;
+  font-family: 'lexend Deca';
+  transition: .2s linear;
+}
+.sedans{
+  background-color: var(--orange);
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.suv{
+  background-color: var(--cyan);
+}
+.luxury{
+  background-color: var(--dark_cyan);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.sedans .button > button{
+  color:var(--orange);
+}
+.suv .button > button{
+  color:var(--cyan);
+}
+.luxury .button > button{
+  color:var(--dark_cyan);
+}
+.button > button:hover{
+  border:2px solid var(--white);
+  color:var(--white);
+  background-color: transparent;
+}
+.attribution{
+  text-align: center;
+  color:var(--dark_cyan);
+  font-size: 11px;
+  margin-top: 20px;
+}
+.attribution a{
+  color:var(--orange);
+}
+@media (max-width:720px) {
+  main{
+    margin:40px auto;
+  }
+  .preview-card{
+    width:70%;
+    display: flex;
+    flex-direction: column;
+  }
+  .card{
+    padding: 2rem;
+    gap:2rem;
+  }
+  .card-img{
+    gap:1rem;
+  }
+  .sedans{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: none;
+  }
+  .luxury{
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: none;
+  }
+}
