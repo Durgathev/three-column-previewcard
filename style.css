@@ -25,6 +25,9 @@ p{
   font-size: 15px;
   font-weight: 400;
 }
+body{
+  background-color: var(--light_grey);
+}
 main{
   min-height: 100vh;
   max-width: 1440px;
@@ -43,6 +46,7 @@ main{
   padding: 2.5rem;
   display:flex;
   flex-direction: column;
+  justify-content:space-between;
   gap:4rem;
 }
 .card-img{
